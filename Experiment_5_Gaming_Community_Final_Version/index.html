@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Gaming Community</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#070707;color:#fff;line-height:1.6}
+header{background:linear-gradient(90deg,#d40000,#8b0000,#d40000);padding:20px 7%;text-align:center;border-bottom:2px solid #ff2020}
+header h1{font-size:34px;letter-spacing:2px}
+header p{font-size:15px;font-style:italic;margin-top:4px}
+nav{background:#111;padding:15px;text-align:center;position:sticky;top:0;z-index:10;border-bottom:1px solid #e00000}
+nav a{color:#fff;text-decoration:none;margin:0 18px;font-weight:bold;font-size:14px}
+nav a:hover{color:#ff3030}
+.hero{min-height:470px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;background:#050505;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.65) 45%,rgba(0,0,0,.35)),url("Call_of_duty.jpeg") center/cover no-repeat;opacity:.75}
+.hero-content{position:relative;z-index:1;max-width:800px;padding:40px}
+.hero h2{font-size:48px;text-transform:uppercase;line-height:1.1;text-shadow:0 0 14px #e00000}
+.hero h2 span{color:#ff2525}
+.hero p{font-size:18px;margin:15px 0 24px}
+.btn{display:inline-block;background:#d60000;color:#fff;text-decoration:none;border-radius:25px;padding:12px 25px;font-weight:bold;margin:5px;border:1px solid #ff3b3b}
+.btn:hover{background:#a80000}
+.section{width:90%;max-width:1100px;margin:30px auto;background:#101010;border:1px solid #850000;border-radius:12px;padding:30px}
+.section h2{font-size:28px;color:#ff3333;margin-bottom:18px}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:25px;align-items:center}
+.about p{color:#ddd}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.stat{background:#181818;border:1px solid #6f0000;border-radius:8px;padding:20px;text-align:center}
+.stat strong{display:block;font-size:25px;color:#ff3030}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.service,.game{background:#181818;border:1px solid #730000;border-radius:8px;padding:20px}
+.service:hover,.game:hover{border-color:#ff3030;box-shadow:0 0 12px rgba(255,0,0,.25)}
+.service h3{color:#ff3838;margin-bottom:8px}
+.service p{color:#ccc;font-size:14px}
+.games{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.game{text-align:center}
+.game h3{margin-top:8px;color:#fff}
+.game img{width:100%;height:170px;object-fit:cover;border-radius:6px}
+.tools{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:#151515;border:1px solid #720000;border-radius:8px;padding:20px}
+.card h3{color:#ff3838;margin-bottom:7px}
+.card p{font-size:13px;color:#bbb;margin-bottom:10px}
+input,select,button{width:100%;padding:10px;margin:5px 0;border-radius:5px;border:1px solid #444;background:#202020;color:#fff}
+button{background:#d40000;border-color:#d40000;font-weight:bold;cursor:pointer}
+button:hover{background:#a80000}
+.result{margin-top:8px;padding:10px;background:#0c0c0c;border:1px solid #333;border-radius:5px;min-height:38px}
+.coin{width:160px;height:120px;object-fit:contain;object-position:center center;display:block;margin:12px auto;border-radius:10px;border:2px solid #ff2d2d;padding:6px;background:#130000;box-shadow:0 0 10px rgba(255,0,0,.18)}
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.contact div{background:#181818;border:1px solid #720000;border-radius:8px;padding:20px}
+.contact h3{color:#ff3838;margin-bottom:5px}
+footer{background:#111;border-top:2px solid #d00000;text-align:center;padding:30px;margin-top:30px;color:#bbb}
+footer h2{color:#ff3030;margin-bottom:6px}
+@media(max-width:800px){.about,.tools{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,1fr)}.games{grid-template-columns:repeat(2,1fr)}.contact{grid-template-columns:1fr}.hero h2{font-size:36px}}
+@media(max-width:550px){.services,.games{grid-template-columns:1fr}nav a{display:inline-block;margin:5px 8px}}
+</style>
+</head>
+<body>
+<header id="home">
+<h1>GAMING COMMUNITY</h1>
+<p>Play Together • Rise Together • Dominate Together</p>
+</header>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#games">Games</a>
+<a href="#features">Features</a>
+<a href="#contact">Contact</a>
+</nav>
+<section class="hero">
+<div class="hero-content">
+<h2>Enter the <span>Gaming Community</span></h2>
+<p>Connect with gamers, build your squad, compete in tournaments and enjoy interactive gaming experiences.</p>
+<a class="btn" href="#features">Explore Features</a>
+<a class="btn" href="#games">Explore Games</a>
+</div>
+</section>
+<section class="section" id="about">
+<h2>About Our Community</h2>
+<div class="about">
+<p>Gaming Community is a place where players can connect through teamwork, competition and friendship. Whether you enjoy FPS games, battle royale, racing, strategy or open-world adventures, the platform provides activities for different types of gamers. Players can create squads, participate in tournaments, share strategies and improve together.</p>
+<div class="stats">
+<div class="stat"><strong>10K+</strong>Active Players</div>
+<div class="stat"><strong>250+</strong>Tournaments</div>
+<div class="stat"><strong>50+</strong>Countries</div>
+</div>
+</div>
+</section>
+<section class="section" id="services">
+<h2>Our Services</h2>
+<div class="services">
+<div class="service"><h3>Multiplayer Gaming</h3><p>Play with gamers worldwide and create your own squads.</p></div>
+<div class="service"><h3>Esports Tournaments</h3><p>Participate in competitions and improve your gaming skills.</p></div>
+<div class="service"><h3>Gaming Forums</h3><p>Share strategies, guides, updates and gaming news.</p></div>
+<div class="service"><h3>Community Events</h3><p>Join events, meet new friends and enjoy gaming together.</p></div>
+</div>
+</section>
+<section class="section" id="games">
+<h2>Featured Games</h2>
+<div class="games">
+<div class="game"><img src="Call_of_duty.jpeg" alt="Call of Duty"><h3>Call of Duty</h3></div>
+<div class="game"><img src="val5.webp" alt="Valorant"><h3>Valorant</h3></div>
+<div class="game"><img src="GTA.jpg" alt="Grand Theft Auto V"><h3>Grand Theft Auto V</h3></div>
+<div class="game"><img src="MC.jpg" alt="Minecraft"><h3>Minecraft</h3></div>
+</div>
+</section>
+<section class="section" id="features">
+<h2>Interactive Gaming Features</h2>
+<div class="tools">
+<div class="card">
+<h3>Word Challenge</h3><p>Find the shortest and longest word in a sentence.</p>
+<input id="sentence" placeholder="Enter a sentence"><button onclick="wordChallenge()">Find Words</button>
+<div class="result" id="wordResult">Result will appear here.</div>
+</div>
+<div class="card">
+<h3>Player Stats Calculator</h3><p>Calculate BMI and display player status.</p>
+<input id="weight" type="number" placeholder="Weight in kg"><input id="height" type="number" placeholder="Height in meters"><button onclick="calculateBMI()">Calculate BMI</button>
+<div class="result" id="bmiResult">Result will appear here.</div>
+</div>
+<div class="card">
+<h3>Fruit Farm</h3><p>Collect a random fruit reward.</p>
+<button onclick="fruitFarm()">Collect Fruit</button><img id="fruitImage" class="coin" src="Apple.jpg" alt="Fruit"><div class="result" id="fruitResult">Reward will appear here.</div>
+</div>
+<div class="card">
+<h3>Gamer Currency Exchange</h3><p>Convert between INR and USD using the laboratory conversion factors.</p>
+<input id="amount" type="number" placeholder="Enter amount"><select id="conversion"><option value="inrToUsd">INR to USD</option><option value="usdToInr">USD to INR</option></select><button onclick="convertCurrency()">Convert</button>
+<div class="result" id="currencyResult">Result will appear here.</div>
+</div>
+<div class="card">
+<h3>Coin Flip Arena</h3><p>Flip the coin and track heads and tails.</p>
+<button onclick="flipCoin()">Flip Coin</button><img id="coinImage" class="coin" src="heads.jpg" alt="Coin"><div class="result" id="coinResult">Heads: 0 | Tails: 0</div>
+</div>
+<div class="card">
+<h3>Gaming Birthday Cake Shop</h3><p>Calculate cake cost, 9% tax and selected tip.</p>
+<select id="cakeWeight"><option value="100">1/2 kg - ₹100</option><option value="200">1 kg - ₹200</option><option value="400">2 kg - ₹400</option></select><select id="tip"><option value="10">10% Tip</option><option value="15">15% Tip</option><option value="20">20% Tip</option></select><button onclick="cakeOrder()">Calculate Order</button>
+<div class="result" id="cakeResult">Order total will appear here.</div>
+</div>
+</div>
+</section>
+<section class="section" id="contact">
+<h2>Contact Us</h2>
+<div class="contact">
+<div><h3>Email</h3><p>poojashree@karunya.edu.in</p></div>
+<div><h3>Phone</h3><p>+91 9385867630</p></div>
+<div><h3>Location</h3><p>Ooty, Tamil Nadu</p></div>
+</div>
+</section>
+<footer>
+<h2>Gaming Community</h2>
+<p>Play Together • Rise Together • Dominate Together</p>
+<p>© 2026 Gaming Community. All Rights Reserved.</p>
+</footer>
+<script>
+let heads=0,tails=0;
+function wordChallenge(){
+let text=document.getElementById("sentence").value.trim();
+if(!text){document.getElementById("wordResult").innerHTML="Please enter a sentence.";return}
+let words=text.split(" ").filter(w=>w);
+let shortest=words[0],longest=words[0];
+for(let i=1;i<words.length;i++){if(words[i].length<shortest.length)shortest=words[i];if(words[i].length>longest.length)longest=words[i]}
+document.getElementById("wordResult").innerHTML="Shortest: <b>"+shortest+"</b><br>Longest: <b>"+longest+"</b>";
+}
+function calculateBMI(){
+let w=parseFloat(document.getElementById("weight").value),h=parseFloat(document.getElementById("height").value);
+if(isNaN(w)||isNaN(h)||h<=0){document.getElementById("bmiResult").innerHTML="Enter valid values.";return}
+let bmi=w/(h*h),status;
+if(bmi<18)status="Underweight Player";else if(bmi<25)status="Normal Player";else if(bmi<30)status="Overweight Player";else status="Obese Player";
+document.getElementById("bmiResult").innerHTML="BMI: <b>"+bmi.toFixed(2)+"</b><br>Status: <b>"+status+"</b>";
+}
+function fruitFarm(){
+let fruits=["Orange.jpg","Apple.jpg"],i=Math.floor(Math.random()*2);
+document.getElementById("fruitImage").src=fruits[i];
+document.getElementById("fruitResult").innerHTML="Reward: <b>"+fruits[i].replace(".jpg","")+"</b>";
+}
+function convertCurrency(){
+let a=parseFloat(document.getElementById("amount").value),t=document.getElementById("conversion").value;
+if(isNaN(a)){document.getElementById("currencyResult").innerHTML="Enter a valid amount.";return}
+if(t==="inrToUsd")document.getElementById("currencyResult").innerHTML="USD: <b>$"+(a*0.015).toFixed(2)+"</b>";
+else document.getElementById("currencyResult").innerHTML="INR: <b>₹"+(a*67.12).toFixed(2)+"</b>";
+}
+function flipCoin(){
+let f=Math.floor(Math.random()*2);
+if(f===0){heads++;document.getElementById("coinImage").src="heads.jpg"}else{tails++;document.getElementById("coinImage").src="tails.jpg"}
+document.getElementById("coinResult").innerHTML="Heads: <b>"+heads+"</b> | Tails: <b>"+tails+"</b>";
+}
+function cakeOrder(){
+let subtotal=parseFloat(document.getElementById("cakeWeight").value),rate=parseFloat(document.getElementById("tip").value);
+let tax=subtotal*.09,afterTax=subtotal+tax,tip=afterTax*(rate/100),total=afterTax+tip;
+document.getElementById("cakeResult").innerHTML="Subtotal: ₹"+subtotal.toFixed(2)+"<br>Tax: ₹"+tax.toFixed(2)+"<br>Tip: ₹"+tip.toFixed(2)+"<br><b>Total: ₹"+total.toFixed(2)+"</b>";
+}
+</script>
+</body>
+</html>
