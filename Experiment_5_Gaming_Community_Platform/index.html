@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaming Community - JavaScript DOM & Events</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:radial-gradient(circle at top,#24113d 0%,#090914 45%,#050508 100%);color:#fff;min-height:100vh}
+header{background:linear-gradient(135deg,#12051f,#2b0b46,#0d0d22);padding:28px 7%;border-bottom:2px solid #9d36ff;box-shadow:0 0 25px rgba(157,54,255,.35)}
+.logo{font-size:32px;font-weight:900;letter-spacing:2px;color:#fff}
+.logo span{color:#ff3b81}
+.tagline{margin-top:8px;color:#c9b8dc}
+nav{margin-top:20px;display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;padding:9px 15px;border:1px solid #6e3a8f;border-radius:8px}
+nav a:hover{background:#9d36ff}
+.container{width:90%;max-width:1200px;margin:35px auto}
+.hero{text-align:center;margin-bottom:35px}
+.hero h1{font-size:42px;margin-bottom:10px}
+.hero p{color:#c9b8dc;max-width:800px;margin:auto;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+.card{background:rgba(20,15,32,.9);border:1px solid #5c3177;border-radius:16px;padding:22px;box-shadow:0 0 18px rgba(157,54,255,.12)}
+.card h2{color:#ff5a96;margin-bottom:8px}
+.card p{color:#cfc4d9;line-height:1.5;margin-bottom:15px}
+input,select,button{width:100%;padding:11px;margin:7px 0;border-radius:8px;border:1px solid #6e3a8f;background:#0d0b15;color:#fff}
+button{background:linear-gradient(90deg,#9d36ff,#ff3b81);border:none;font-weight:bold;cursor:pointer}
+button:hover{opacity:.88}
+.result{margin-top:10px;padding:12px;background:#100d1b;border-left:4px solid #ff3b81;border-radius:6px;min-height:42px}
+.fruit-image,.coin-image{display:block;width:150px;height:150px;object-fit:cover;margin:15px auto;border-radius:14px;border:2px solid #9d36ff}
+footer{text-align:center;padding:28px;color:#9f91ab;margin-top:35px;border-top:1px solid #3d2850}
+.small{font-size:13px;color:#9f91ab}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">GAMING <span>COMMUNITY</span></div>
+<div class="tagline">Play • Compete • Connect • Explore</div>
+<nav>
+<a href="#word">Word Challenge</a>
+<a href="#stats">Player Stats</a>
+<a href="#fruit">Fruit Farm</a>
+<a href="#currency">Currency</a>
+<a href="#coin">Coin Flip</a>
+<a href="#cake">Cake Shop</a>
+</nav>
+</header>
+<div class="container">
+<section class="hero">
+<h1>Gaming Community Platform</h1>
+<p>An interactive JavaScript gaming hub demonstrating DOM elements, variables, functions, conditions, arrays, loops, random values and browser events through six mini-games and player utilities.</p>
+</section>
+<div class="grid">
+<section class="card" id="word">
+<h2>🎮 Word Challenge</h2>
+<p>Enter a sentence and let the system find the shortest and longest words.</p>
+<input id="sentence" type="text" placeholder="Enter your game-related sentence">
+<button id="wordBtn">Analyze Words</button>
+<div class="result" id="wordResult">Result will appear here.</div>
+</section>
+<section class="card" id="stats">
+<h2>🏆 Player Stats Calculator</h2>
+<p>Calculate a player's BMI and display the corresponding player status.</p>
+<input id="weight" type="number" placeholder="Weight in kg">
+<input id="height" type="number" placeholder="Height in meters">
+<button id="bmiBtn">Calculate Player Status</button>
+<div class="result" id="bmiResult">Player status will appear here.</div>
+</section>
+<section class="card" id="fruit">
+<h2>🍎 Fruit Farm Arena</h2>
+<p>Choose a random reward from the community fruit farm.</p>
+<button id="fruitBtn">Collect Random Reward</button>
+<img id="fruitImage" class="fruit-image" src="Apple.jpg" alt="Fruit reward">
+<div class="result" id="fruitResult">Your reward will appear here.</div>
+</section>
+<section class="card" id="currency">
+<h2>💰 Gamer Currency Exchange</h2>
+<p>Convert between INR and USD using the conversion factors from the laboratory reference exercise.</p>
+<input id="amount" type="number" placeholder="Enter amount">
+<select id="conversion">
+<option value="inrToUsd">INR → USD</option>
+<option value="usdToInr">USD → INR</option>
+</select>
+<button id="convertBtn">Convert Credits</button>
+<div class="result" id="currencyResult">Converted value will appear here.</div>
+</section>
+<section class="card" id="coin">
+<h2>🪙 Coin Flip Arena</h2>
+<p>Flip the arena coin and track the number of heads and tails.</p>
+<button id="flipBtn">Flip Coin</button>
+<img id="coinImage" class="coin-image" src="heads.jpg" alt="Coin result">
+<div class="result" id="coinResult">Heads: 0 | Tails: 0</div>
+</section>
+<section class="card" id="cake">
+<h2>🎂 Gaming Birthday Cake Shop</h2>
+<p>Place a cake order and calculate subtotal, 9% tax and selected tip.</p>
+<select id="cakeWeight">
+<option value="100">1/2 kg - ₹100</option>
+<option value="200">1 kg - ₹200</option>
+<option value="400">2 kg - ₹400</option>
+</select>
+<select id="tip">
+<option value="10">10% Tip</option>
+<option value="15">15% Tip</option>
+<option value="20">20% Tip</option>
+</select>
+<button id="cakeBtn">Place Cake Order</button>
+<div class="result" id="cakeResult">Order total will appear here.</div>
+</section>
+</div>
+</div>
+<footer>Gaming Community Platform • JavaScript DOM Elements & Events • Web Technology Lab</footer>
+<script>
+let heads=0;
+let tails=0;
+document.getElementById("wordBtn").addEventListener("click",function(){
+let text=document.getElementById("sentence").value.trim();
+if(text===""){document.getElementById("wordResult").innerHTML="Please enter a sentence.";return}
+let words=text.split(" ").filter(word=>word!=="");
+let shortest=words[0];
+let longest=words[0];
+for(let i=1;i<words.length;i++){
+if(words[i].length<shortest.length){shortest=words[i]}
+if(words[i].length>longest.length){longest=words[i]}
+}
+document.getElementById("wordResult").innerHTML="Shortest Word: <b>"+shortest+"</b><br>Longest Word: <b>"+longest+"</b>";
+});
+document.getElementById("bmiBtn").addEventListener("click",function(){
+let weight=parseFloat(document.getElementById("weight").value);
+let height=parseFloat(document.getElementById("height").value);
+if(isNaN(weight)||isNaN(height)||height<=0){document.getElementById("bmiResult").innerHTML="Enter valid player weight and height.";return}
+let bmi=weight/(height*height);
+let status;
+if(bmi<18){status="Underweight Player"}
+else if(bmi<25){status="Normal Player"}
+else if(bmi<30){status="Overweight Player"}
+else{status="Obese Player"}
+document.getElementById("bmiResult").innerHTML="BMI: <b>"+bmi.toFixed(2)+"</b><br>Status: <b>"+status+"</b>";
+});
+document.getElementById("fruitBtn").addEventListener("click",function(){
+let fruits=["Orange.jpg","Apple.jpg"];
+let index=Math.floor(Math.random()*2);
+document.getElementById("fruitImage").src=fruits[index];
+document.getElementById("fruitResult").innerHTML="Reward collected: <b>"+fruits[index].replace(".jpg","")+"</b>";
+});
+document.getElementById("convertBtn").addEventListener("click",function(){
+let amount=parseFloat(document.getElementById("amount").value);
+let type=document.getElementById("conversion").value;
+if(isNaN(amount)){document.getElementById("currencyResult").innerHTML="Enter a valid amount.";return}
+let result;
+if(type==="inrToUsd"){result=amount*0.015;document.getElementById("currencyResult").innerHTML="USD Credits: <b>$"+result.toFixed(2)+"</b>"}
+else{result=amount*67.12;document.getElementById("currencyResult").innerHTML="INR Credits: <b>₹"+result.toFixed(2)+"</b>"}
+});
+document.getElementById("flipBtn").addEventListener("click",function(){
+let flip=Math.floor(Math.random()*2);
+if(flip===0){heads++;document.getElementById("coinImage").src="heads.jpg";document.getElementById("coinResult").innerHTML="Result: <b>HEADS</b><br>Heads: "+heads+" | Tails: "+tails}
+else{tails++;document.getElementById("coinImage").src="tails.jpg";document.getElementById("coinResult").innerHTML="Result: <b>TAILS</b><br>Heads: "+heads+" | Tails: "+tails}
+});
+document.getElementById("cakeBtn").addEventListener("click",function(){
+let subtotal=parseFloat(document.getElementById("cakeWeight").value);
+let tipRate=parseFloat(document.getElementById("tip").value);
+let tax=subtotal*0.09;
+let afterTax=subtotal+tax;
+let tip=afterTax*(tipRate/100);
+let total=afterTax+tip;
+document.getElementById("cakeResult").innerHTML="Subtotal: ₹"+subtotal.toFixed(2)+"<br>Tax (9%): ₹"+tax.toFixed(2)+"<br>Tip ("+tipRate+"%): ₹"+tip.toFixed(2)+"<br><b>Total: ₹"+total.toFixed(2)+"</b>";
+});
+</script>
+</body>
+</html>
